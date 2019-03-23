@@ -12,7 +12,7 @@ function ccp (coins, change) {
   let minCoins = Number.MAX_SAFE_INTEGER
   for (let i = 0; i < coins.length; i++) {
     let res = ccp(coins, change - coins[i])
-    if (!isNaN(res)) {
+    if (res !==  Number.MAX_SAFE_INTEGER) {
       minCoins = Math.min(minCoins, res + 1)
     }
   }
